@@ -2,3 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .navlink {
+    @apply after:content-[''] after:block 
+         after:absolute after:h-[3px] after:bg-green-400 after:w-full
+          after:scale-x-0 after:hover:scale-x-100 after:transition-all
+           after:duration-200 after:origin-right relative text-xl text-balance w-fit block;
+  }
+  
+}

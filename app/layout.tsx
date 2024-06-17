@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import ResponsiveNavbar from "./components/Home/Navbar/ResponsiveNavbar";
 
 const poppinsfont = Poppins({ 
   weight: ['200','300','400','500','600','700','800'],
@@ -18,7 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppinsfont.className} bg-[#000000d8]`}>{children}</body>
+      <body className={`${poppinsfont.className} bg-[#000000d8]`}>
+        <ResponsiveNavbar/>
+        {children}
+      </body>
     </html>
   );
 }
